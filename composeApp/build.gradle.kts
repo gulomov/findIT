@@ -7,7 +7,7 @@ plugins {
             androidApplication,
             composeMultiplatform,
             composeCompiler,
-            kotlinSerialization,
+            serialization,
             ksp,
             roomGradlePlugin,
         )
@@ -41,7 +41,7 @@ kotlin {
             implementation(libs.ktorAndroid)
             implementation(libs.timber)
             implementation(libs.bundles.koinAndroid)
-            implementation(libs.kotlinxSerialization)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -54,8 +54,10 @@ kotlin {
             implementation(libs.bundles.dataStore)
             implementation(libs.bundles.ktorMultiplatform)
             implementation(libs.bundles.coil)
+            implementation(libs.androidxCoreKtx)
             implementation(libs.roomRuntime)
             implementation(libs.sqliteBundled)
+            implementation(libs.composeNavigation)
         }
 
         commonTest.dependencies {
