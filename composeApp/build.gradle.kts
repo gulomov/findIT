@@ -10,6 +10,7 @@ plugins {
             serialization,
             ksp,
             roomGradlePlugin,
+            googleServices
         )
     }.forEach {
         alias(it)
@@ -51,13 +52,14 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.koinCore)
-            implementation(libs.bundles.dataStore)
-            implementation(libs.bundles.ktorMultiplatform)
-            implementation(libs.bundles.coil)
             implementation(libs.androidxCoreKtx)
             implementation(libs.roomRuntime)
             implementation(libs.sqliteBundled)
             implementation(libs.composeNavigation)
+            implementation(libs.bundles.dataStore)
+            implementation(libs.bundles.ktorMultiplatform)
+            implementation(libs.bundles.coil)
+            implementation(libs.bundles.firebase)
         }
 
         commonTest.dependencies {
