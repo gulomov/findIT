@@ -71,11 +71,11 @@ kotlin {
 }
 
 android {
-    namespace = "projcet.play.ground.jg"
+    namespace = "project.play.ground.jg"
     compileSdk = libs.versions.androidCompileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "projcet.play.ground.jg"
+        applicationId = "project.play.ground.jg"
         minSdk = libs.versions.androidMinSdk.get().toInt()
         targetSdk = libs.versions.androidTargetSdk.get().toInt()
         versionCode = 1

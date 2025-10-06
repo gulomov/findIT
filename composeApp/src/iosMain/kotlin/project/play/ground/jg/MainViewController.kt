@@ -1,4 +1,4 @@
-package projcet.play.ground.jg
+package project.play.ground.jg
 
 import App
 import androidx.compose.ui.window.ComposeUIViewController

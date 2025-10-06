@@ -1,4 +1,4 @@
-package projcet.play.ground.jg
+package project.play.ground.jg
 
 import android.os.Build
 
