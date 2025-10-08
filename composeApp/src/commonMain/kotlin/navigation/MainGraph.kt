@@ -6,7 +6,7 @@ import androidx.compose.animation.core.tween
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import feature.home.HomeScreen
+import ui.home.HomeScreen
 
 fun NavGraphBuilder.mainGraph(navController: NavController) {
     composable<HomeScreen>(
