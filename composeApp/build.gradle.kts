@@ -41,7 +41,6 @@ kotlin {
             implementation(libs.androidxActivityCompose)
             implementation(libs.ktorAndroid)
             implementation(libs.timber)
-            implementation(libs.bundles.koinAndroid)
 
         }
         commonMain.dependencies {
@@ -60,6 +59,7 @@ kotlin {
             implementation(libs.bundles.ktorMultiplatform)
             implementation(libs.bundles.coil)
             implementation(libs.bundles.firebase)
+            implementation(libs.bundles.koinMultuplatform)
         }
 
         commonTest.dependencies {
