@@ -7,23 +7,13 @@ import dev.gitlive.firebase.initialize
 import di.firebaseModule
 import di.provideHttpClientModule
 import domain.di.domainModule
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
+import org.koin.compose.KoinApplication
+import org.koin.core.KoinApplication
+import ui.di.featureViewModel
 
 class AndroidApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Firebase.initialize(this)
-        startKoin {
-            androidContext(this@AndroidApp)
-            androidLogger()
-            modules(
-                firebaseModule,
-                provideHttpClientModule,
-                domainModule,
-                dataModule,
-            )
-        }
     }
 }
