@@ -5,13 +5,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 internal data class RecommendationsResponse(
-    @SerialName("recommendationsList")
-    val recommendationsList: List<RecommendationItemResponse>,
-)
-
-
-@Serializable
-data class RecommendationItemResponse(
     @SerialName("id")
     val id: Int,
     @SerialName("image")

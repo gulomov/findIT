@@ -25,6 +25,7 @@ timber = "5.0.1"
 composeNavigation = "2.9.0"
 googleServices = "4.4.3"
 firebase = "1.12.0"
+kermit = "2.0.8"
 
 [libraries]
 kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -38,6 +39,7 @@ androidxActivityCompose = { module = "androidx.activity:activity-compose", versi
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 composeNavigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 
 #DI

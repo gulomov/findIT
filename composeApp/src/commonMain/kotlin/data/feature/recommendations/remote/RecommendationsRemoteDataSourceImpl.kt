@@ -1,27 +1,17 @@
 package data.feature.recommendations.remote
 
-import data.feature.recommendations.converter.RecommendationResponseConverter
-import data.feature.recommendations.remote.response.RecommendationsResponse
-import dev.gitlive.firebase.database.FirebaseDatabase
-import domain.RecommendationList
-import firebase.fetchOnceFromRealTimeDatabase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.IO
-import kotlinx.coroutines.flow.firstOrNull
-import kotlinx.coroutines.flow.flowOn
+import domain.feature.recommendations.model.Recommendation
+import kotlinx.coroutines.flow.Flow
+import listenToList
 
-internal class RecommendationsRemoteDataSourceImpl(
-    private val firebaseDatabase: FirebaseDatabase,
-    private val converter: RecommendationResponseConverter
-) : RecommendationsRemoteDataSource {
+internal class RecommendationsRemoteDataSourceImpl() : RecommendationsRemoteDataSource {
 
-    override suspend fun getRecommendationsList(): RecommendationList =
-        converter.toDomain(
-            fetchOnceFromRealTimeDatabase<RecommendationsResponse>(
-                "home/recommendations",
-                firebaseDatabase
-            )
-                .flowOn(Dispatchers.IO)
-                .firstOrNull() ?: RecommendationsResponse(emptyList())
+    override suspend fun getRecommendationsList(): Flow<List<Recommendation>> {
+        val recommendationsFlow = listenToList(
+            path = "home/recommendations",
+            arrayKey = "recommendationsList",
+            deserializer = Recommendation.serializer()
         )
+        return recommendationsFlow
+    }
 }

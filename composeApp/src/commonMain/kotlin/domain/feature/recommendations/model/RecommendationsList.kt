@@ -1,15 +1,10 @@
-package domain
+package domain.feature.recommendations.model
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RecommendationList(
-    val recommendationsList: List<RecommendationItem>,
-)
-
-@Serializable
-data class RecommendationItem(
-    val id: Int,
-    val image: String,
-    val brand: String
+data class Recommendation(
+    val id: Int? = null,
+    val image: String? = null,
+    val brand: String? = null
 )

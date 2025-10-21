@@ -55,6 +55,7 @@ kotlin {
             implementation(libs.roomRuntime)
             implementation(libs.sqliteBundled)
             implementation(libs.composeNavigation)
+            implementation(libs.kermit)
             implementation(libs.bundles.dataStore)
             implementation(libs.bundles.ktorMultiplatform)
             implementation(libs.bundles.coil)

@@ -1,4 +1,4 @@
-package navigation
+package core.navigation
 
 import kotlinx.serialization.Serializable
 

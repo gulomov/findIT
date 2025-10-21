@@ -1,12 +1,12 @@
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import data.di.dataModule
-import di.firebaseModule
 import di.provideHttpClientModule
 import domain.di.domainModule
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
-import navigation.AppNavHost
+import core.navigation.AppNavHost
+import di.commonModule
 import org.koin.compose.KoinApplication
 import ui.di.featureViewModel
 
@@ -15,7 +15,7 @@ import ui.di.featureViewModel
 fun App() {
     KoinApplication(application = {
         modules(
-            firebaseModule,
+            commonModule,
             provideHttpClientModule,
             domainModule,
             dataModule,

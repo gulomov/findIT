@@ -1,7 +1,8 @@
 package data.feature.recommendations.remote
 
-import domain.RecommendationList
+import domain.feature.recommendations.model.Recommendation
+import kotlinx.coroutines.flow.Flow
 
 interface RecommendationsRemoteDataSource {
-    suspend fun getRecommendationsList(): RecommendationList
+    suspend fun getRecommendationsList(): Flow<List<Recommendation>>
 }

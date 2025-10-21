@@ -1,7 +1,8 @@
 package domain.feature.recommendations
 
-import domain.RecommendationList
+import domain.feature.recommendations.model.Recommendation
+import kotlinx.coroutines.flow.Flow
 
 interface RecommendationsRepository {
-    suspend fun getRecommendations(): RecommendationList
+    suspend fun getRecommendations(): Flow<List<Recommendation>>
 }
