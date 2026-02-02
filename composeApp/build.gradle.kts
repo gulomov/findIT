@@ -10,7 +10,7 @@ plugins {
             serialization,
             ksp,
             roomGradlePlugin,
-            googleServices
+            googleServices,
         )
     }.forEach {
         alias(it)
@@ -41,6 +41,9 @@ kotlin {
             implementation(libs.androidxActivityCompose)
             implementation(libs.ktorAndroid)
             implementation(libs.timber)
+            implementation(libs.workRruntime)
+            implementation(libs.koinWorker)
+            implementation(libs.koinCore)
 
         }
         commonMain.dependencies {

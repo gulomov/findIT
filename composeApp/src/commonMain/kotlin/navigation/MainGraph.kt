@@ -1,4 +1,4 @@
-package core.navigation
+package navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.FastOutSlowInEasing

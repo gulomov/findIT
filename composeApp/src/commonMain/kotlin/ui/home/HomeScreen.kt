@@ -1,5 +1,6 @@
 package ui.home
 
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,19 +27,24 @@ fun HomeScreen(
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
 
-    when (state) {
-        is HomeState.Content -> {
-            HomeContent(recommendations = (state as HomeState.Content).recommendations)
-        }
-
-        is HomeState.Error -> {
-            Logger.d {
-                " error: ${(state as HomeState.Error).message}"
+    AnimatedContent(
+        targetState = state,
+        modifier = modifier
+    ) {
+        when (state) {
+            is HomeState.Content -> {
+                HomeContent(recommendations = (state as HomeState.Content).recommendations)
             }
-        }
 
-        is HomeState.Loading -> {
+            is HomeState.Error -> {
+                Logger.d {
+                    " error: ${(state as HomeState.Error).message}"
+                }
+            }
 
+            is HomeState.Loading -> {
+
+            }
         }
     }
 }
