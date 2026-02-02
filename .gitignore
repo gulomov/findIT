@@ -1,18 +1,70 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin
 *.iml
-.kotlin
-.gradle
-**/build/
-xcuserdata
-!src/**/build/
+.kotlin/
+
+# IntelliJ IDEA
+.idea/
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/aws.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/dictionaries
+.idea/libraries
+.idea/markdown-nag.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/.name
+
+# Android
 local.properties
-.idea
-.DS_Store
-captures
+*.keystore
+*.jks
 .externalNativeBuild
 .cxx
+captures/
+.android/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# iOS
+xcuserdata/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+DerivedData/
+Pods/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+.tmp/
+
+# Package Manager
+*.m2
