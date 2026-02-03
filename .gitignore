@@ -36,6 +36,7 @@ captures/
 *.aab
 *.ap_
 *.dex
+google-services.json
 
 # iOS
 xcuserdata/
