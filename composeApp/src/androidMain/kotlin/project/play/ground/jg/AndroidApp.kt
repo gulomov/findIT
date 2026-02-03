@@ -10,7 +10,7 @@ import di.provideHttpClientModule
 import domain.di.domainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import ui.di.featureViewModel
+import feature.di.featureViewModel
 
 class AndroidApp : Application() {
     override fun onCreate() {

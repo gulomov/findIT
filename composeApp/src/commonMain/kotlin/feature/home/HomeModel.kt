@@ -1,19 +1,15 @@
-package ui.home
+package feature.home
 
 import androidx.compose.runtime.Immutable
 import domain.feature.recommendations.model.Recommendation
 
-
-sealed interface HomeEvent {
-    fun setRecommendations(recommendation: List<Recommendation>): HomeEvent
-}
 
 sealed interface HomeState {
     data object Loading : HomeState
 
     data class Error(
         val message: String,
-    ): HomeState
+    ) : HomeState
 
     @Immutable
     data class Content(

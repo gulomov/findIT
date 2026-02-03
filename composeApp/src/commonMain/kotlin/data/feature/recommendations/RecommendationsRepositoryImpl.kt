@@ -15,6 +15,5 @@ class RecommendationsRepositoryImpl(
         remote.getRecommendationsList().onEach {
             local.saveRecommendations(it)
         }
-
 }
 

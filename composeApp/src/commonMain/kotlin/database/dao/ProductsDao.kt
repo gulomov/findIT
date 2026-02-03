@@ -6,11 +6,12 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import database.entity.RecommendationEntity
 import domain.feature.recommendations.model.Recommendation
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProductsDao {
     @Query("SELECT * from recommendation")
-    suspend fun getRecommendations(): Recommendation
+    fun getRecommendations(): Flow<List<Recommendation>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRecommendations(

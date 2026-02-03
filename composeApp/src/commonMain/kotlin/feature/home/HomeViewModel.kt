@@ -1,4 +1,4 @@
-package ui.home
+package feature.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

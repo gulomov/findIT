@@ -1,4 +1,4 @@
-package ui.home
+package feature.home
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Arrangement

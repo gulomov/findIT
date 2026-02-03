@@ -1,4 +1,4 @@
-package ui.favorite
+package feature.favorite
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
