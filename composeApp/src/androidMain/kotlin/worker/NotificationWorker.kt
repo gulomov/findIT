@@ -28,7 +28,6 @@ class NotificationWorker(context: Context, workerParameters: WorkerParameters) :
                 brand = brandName,
             )
 
-            recommendationsRepository.saveRecommendation(recommendation = recommendation)
 
             showNotification(brandName)
             return Result.success()

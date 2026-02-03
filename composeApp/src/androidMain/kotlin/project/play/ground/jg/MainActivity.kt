@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : ComponentActivity() {
 
-    private val requestPermissionLauncher =
+    /*private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
             if (isGranted) {
                 scheduleNotification(this)
@@ -28,9 +28,9 @@ class MainActivity : ComponentActivity() {
                 // Permission denied
             }
 
-        }
+        }*/
 
-    private fun scheduleNotification(context: Context) {
+    /*private fun scheduleNotification(context: Context) {
         val periodNotificationRequest: PeriodicWorkRequest =
             PeriodicWorkRequestBuilder<NotificationWorker>(
                 repeatInterval = 15,
@@ -44,25 +44,19 @@ class MainActivity : ComponentActivity() {
                 ExistingPeriodicWorkPolicy.UPDATE,
                 periodNotificationRequest
             )
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         setContent {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+          /*  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             } else {
                 scheduleNotification(this)
-            }
+            }*/
             App()
         }
     }
-}
-
-@Preview
-@Composable
-fun AppAndroidPreview() {
-    App()
 }

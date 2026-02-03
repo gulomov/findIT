@@ -28,6 +28,7 @@ firebase = "1.12.0"
 kermit = "2.0.8"
 room = "2.8.3"
 work = "2.9.0"
+compose-material3-multiplatform = "1.9.0"
 
 [libraries]
 kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -42,7 +43,7 @@ datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "d
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 composeNavigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
-
+composeMaterial3Multiplatform = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3-multiplatform" }
 
 #DI
 koinCore = { module = "io.insert-koin:koin-core", version.ref = "koin" }

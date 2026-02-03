@@ -49,6 +49,8 @@ kotlin {
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.materialIconsExtended)
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
@@ -59,6 +61,7 @@ kotlin {
             implementation(libs.sqliteBundled)
             implementation(libs.composeNavigation)
             implementation(libs.kermit)
+            implementation(libs.composeMaterial3Multiplatform)
             implementation(libs.bundles.dataStore)
             implementation(libs.bundles.ktorMultiplatform)
             implementation(libs.bundles.coil)

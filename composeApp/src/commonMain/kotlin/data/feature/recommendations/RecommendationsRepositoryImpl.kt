@@ -16,9 +16,5 @@ class RecommendationsRepositoryImpl(
             local.saveRecommendations(it)
         }
 
-    override suspend fun saveRecommendation(recommendation: Recommendation) {
-        // wrapping to listOf was used for learning process
-        local.saveRecommendations(recommendations = listOf(recommendation))
-    }
 }
 
