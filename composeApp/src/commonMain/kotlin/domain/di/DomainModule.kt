@@ -1,8 +1,9 @@
 package domain.di
 
-import domain.feature.recommendations.di.recommendationsModule
+import domain.feature.news.di.newsDomainModule
+import domain.feature.recommendations.di.recommendationsDomainModule
 import org.koin.dsl.module
 
 val domainModule = module {
-    includes(recommendationsModule)
+    includes(recommendationsDomainModule, newsDomainModule)
 }

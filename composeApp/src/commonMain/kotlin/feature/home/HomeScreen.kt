@@ -2,9 +2,9 @@ package feature.home
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -14,8 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import co.touchlab.kermit.Logger
-import domain.feature.recommendations.model.Recommendation
+import feature.home.components.RecommendationItem
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -33,37 +32,41 @@ fun HomeScreen(
     ) {
         when (state) {
             is HomeState.Content -> {
-                HomeContent(recommendations = (state as HomeState.Content).recommendations)
+                HomeContent(
+                    content = (state as HomeState.Content),
+                    onClick = viewModel::handleClick
+                )
             }
 
-            is HomeState.Error -> {
-                Logger.d {
-                    " error: ${(state as HomeState.Error).message}"
-                }
-            }
+            is HomeState.Error -> {}
 
-            is HomeState.Loading -> {
-
-            }
+            is HomeState.Loading -> {}
         }
     }
 }
 
 @Composable
 private fun HomeContent(
-    recommendations: List<Recommendation>,
-    modifier: Modifier = Modifier
+    content: HomeState.Content,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
 ) {
-    Column(
+    LazyColumn(
         modifier = modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Hello")
-        Button(
-            onClick = { }
-        ) {
-            Text("Click to log")
+        items(items = content.recommendations, key = { "${it.id}+ ${it.brand}" }) {
+            RecommendationItem(
+                recommendation = it,
+                onItemClick = {}
+            )
+        }
+
+        items(items = content.news, key = { "${it.id}+ ${it.title}" }) {
+            Text(
+                text = it.title
+            )
         }
     }
 }

@@ -3,7 +3,7 @@ package data.feature.recommendations
 import data.feature.recommendations.local.RecommendationsLocalDataSource
 import data.feature.recommendations.remote.RecommendationsRemoteDataSource
 import domain.feature.recommendations.model.Recommendation
-import domain.feature.recommendations.RecommendationsRepository
+import data.feature.recommendations.RecommendationsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.onEach
 

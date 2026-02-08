@@ -61,7 +61,6 @@ sqliteBundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqli
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coilCompose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coilComposeCore = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
-coilKtor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
 
 # Ktor
 ktorCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }

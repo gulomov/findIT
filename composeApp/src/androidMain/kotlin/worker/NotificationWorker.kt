@@ -8,7 +8,7 @@ import androidx.work.WorkerParameters
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.work.CoroutineWorker
-import domain.feature.recommendations.RecommendationsRepository
+import data.feature.recommendations.RecommendationsRepository
 import domain.feature.recommendations.model.Recommendation
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -29,7 +29,7 @@ class NotificationWorker(context: Context, workerParameters: WorkerParameters) :
             )
 
 
-            showNotification(brandName)
+            //showNotification(brandName)
             return Result.success()
         } catch (e: Exception) {
             return Result.failure()

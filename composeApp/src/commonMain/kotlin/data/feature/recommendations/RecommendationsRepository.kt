@@ -1,4 +1,4 @@
-package domain.feature.recommendations
+package data.feature.recommendations
 
 import domain.feature.recommendations.model.Recommendation
 import kotlinx.coroutines.flow.Flow

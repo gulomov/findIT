@@ -1,6 +1,8 @@
 package feature.home
 
 import androidx.compose.runtime.Immutable
+import domain.feature.news.model.NewsInfo
+import domain.feature.news.model.NewsItem
 import domain.feature.recommendations.model.Recommendation
 
 
@@ -13,7 +15,7 @@ sealed interface HomeState {
 
     @Immutable
     data class Content(
-        val recommendations: List<Recommendation> = emptyList()
+        val recommendations: List<Recommendation>,
+        val news: List<NewsItem>,
     ) : HomeState
-
 }

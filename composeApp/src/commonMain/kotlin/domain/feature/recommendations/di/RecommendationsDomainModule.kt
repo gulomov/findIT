@@ -4,6 +4,6 @@ import domain.feature.recommendations.GetRecommendationsUseCase
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 
-val recommendationsModule = module {
+val recommendationsDomainModule = module {
     factoryOf(::GetRecommendationsUseCase)
 }

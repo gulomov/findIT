@@ -6,7 +6,6 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.ui.graphics.vector.ImageVector
-import kotlinx.serialization.Serializable
 import navigation.ScreenRoute.FAVORITE
 
 enum class BottomBarScreen(
