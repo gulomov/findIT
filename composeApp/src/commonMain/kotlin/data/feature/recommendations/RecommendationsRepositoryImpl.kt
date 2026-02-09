@@ -11,9 +11,9 @@ class RecommendationsRepositoryImpl(
     private val remote: RecommendationsRemoteDataSource,
     private val local: RecommendationsLocalDataSource
 ) : RecommendationsRepository {
-    override suspend fun getRecommendations(): Flow<List<Recommendation>> =
-        remote.getRecommendationsList().onEach {
-            local.saveRecommendations(it)
+    override suspend fun getRecommendations(): List<Recommendation> =
+        remote.getRecommendationsList().apply {
+            local.saveRecommendations(this)
         }
 }
 

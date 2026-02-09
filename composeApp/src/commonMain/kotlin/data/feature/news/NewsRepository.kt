@@ -1,8 +1,7 @@
 package data.feature.news
 
 import domain.feature.news.model.NewsItem
-import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
-    suspend fun getNews(): Flow<List<NewsItem>>
+    suspend fun getNews(): List<NewsItem>
 }

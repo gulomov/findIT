@@ -6,12 +6,11 @@ import listenToList
 
 internal class RecommendationsRemoteDataSourceImpl() : RecommendationsRemoteDataSource {
 
-    override suspend fun getRecommendationsList(): Flow<List<Recommendation>> {
-        val recommendationsFlow = listenToList(
+    override suspend fun getRecommendationsList(): List<Recommendation> {
+        return listenToList(
             path = "home/recommendations",
             arrayKey = "recommendationsList",
             deserializer = Recommendation.serializer()
         )
-        return recommendationsFlow
     }
 }
